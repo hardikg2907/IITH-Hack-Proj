@@ -128,9 +128,30 @@ body
     letter-spacing: 3px;
     border-radius: 5px;
   }
+
+  .login-box form button{
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    font-weight: bold;
+    background-color: rgb(9, 114, 39);
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 20px;
+    letter-spacing: 3px;
+    border-radius: 5px;
+    color: white;
+  }
+
+  .login-box form button:hover{
+    color: black;
+  }
   
   .login-box a:hover {
-    background: #fff;
+    /* background: #fff; */
     color: #272727;
     border-radius: 5px;
   }

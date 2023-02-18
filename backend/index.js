@@ -8,17 +8,23 @@ const port = process.env.PORT || 3000;
 const User = require('./User.js')
 
 app.use(express.static('../frontend'))
+app.use(express.json());
+app.use(express.urlencoded({extended: true}));
 
-app.get('/', (req,res)=>{
-    res.send();
+app.get('/login', (req,res)=>{
+    // res.sendFile('C:/Users/hardi/OneDrive/Desktop/IITH hack proj/frontend/login.html');
+    // console.log();
     // console.log(res);
 })
 
 app.post('/register',async (req,res)=>{
-    const user = await User.create({
+    console.log(req.body);
+
+    const user = new User({
         username: req.body.username,
-        password: req.body.password,
+        password: req.body.password
     });
+    await user.save();
 
     return res.status(200).json(user);
 })

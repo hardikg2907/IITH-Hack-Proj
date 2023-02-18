@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
-const Schema = mongoose.Schema
+mongoose.set('strictQuery', false);
+const { Schema } = mongoose;
 var User = new Schema({
     username: {
         type: String
