@@ -11,89 +11,29 @@
 
 <body>
     <div class="parent">
-    <!-- <div class="login"> -->
-        <!-- <h1>All-Cam LiveStreams</h1> -->
-        <!-- <div class="form">
-            <div>
-                <label for="username">Username: </label>
-                <input type="username" id="logusername" name="username" required>
-            </div>
-            <div>
-                <label for="password">Password: </label>
-                <input type="password" id="logpass" name="password" required>
-            </div>
-            <button class="bt">New User</button>
-            <button type="submit" value="submit" id="login">Login</button>
+
+        <div class="heading">
+            All-Cam LiveStreams
         </div>
-    </div> -->
-    
-    <div class="heading">
-        All-Cam LiveStreams
-    </div>
-    <div class="login-box" id="loginbox">
-        <form method="post" action="/login">
-            <div class="user-box">
-                <input required name="username" type="text" id="username">
-                <label>Username</label>
-            </div>
-            <div class="user-box">
-                <input required name="password" type="password" id="password">
-                <label>Password</label>
-            </div>
-            <button type="submit" value="submit">Submit</button>
-            <p style="margin-top: 30px">OR</p>
-            <a id="facebook" href="#">Login using facebook</a>
-            <a id="google" href="#">Login using google</a>
-            <a id="github" href="#">Login using Github</a>
-        </form>
-        <p>Don't have an account? <a href="" class="a2" id="signup" onclick="document.getElementById('sigupbox').style.display='block'">Sign up!</a></p>
-    </div>
-
-    <div class="signup-box" id="signupbox">
-        <form>
-            <div class="user-box">
-                <input required="" name="" type="text">
-                <label>Name</label>
-            </div>
-            <div class="user-box">
-                <input required="" name="" type="text">
-                <label>Email</label>
-            </div>
-            <div class="user-box">
-                <input required="" name="" type="text">
-                <label>Username</label>
-            </div>
-            <div class="user-box">
-                <input required="" name="" type="password">
-                <label>Password</label>
-            </div>
-            <a href="#">Register</a>
-            <p>Have an existing account? <a href="" class="a2" id="login">Log in!</a></p>
-        </form>
-
-    <!-- <div class="register displaynone">
-        <h1>Register</h1>
-        <div class="form">
-            <div>
-                <label for="name">Name: </label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div>
-                <label for="username">Username: </label>
-                <input type="username" id="username" name="username" required>
-            </div>
-            <div>
-                <label for="password">Password: </label>
-                <input type="text" id="password" name="password" required>
-            </div>
-            <button class="bt">Login</button>
-            <button type="submit" value="submit" id="register">Register</button>
-            <div class="regsuccess"></div>
+        <div class="login-box" id="loginbox">
+            <form method="post" action="/login">
+                <div class="user-box">
+                    <input required name="username" type="text" id="username">
+                    <label>Username</label>
+                </div>
+                <div class="user-box">
+                    <input required name="password" type="password" id="password">
+                    <label>Password</label>
+                </div>
+                <button type="submit" value="submit">Login</button>
+                <p style="margin-top: 30px">OR</p>
+                <a id="facebook" href="#">Login using facebook</a>
+                <a id="google" href="#">Login using google</a>
+                <a id="github" href="#">Login using Github</a>
+            </form>
+            <p>Don't have an account? <a href="register.html" class="a2" id="signup">Sign up!</a></p>
         </div>
-    </div> -->
     </div>
-    <script src="app.js"></script>
-
 </body>
 
 </html>

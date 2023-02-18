@@ -2,6 +2,12 @@ const mongoose = require('mongoose')
 mongoose.set('strictQuery', false);
 const { Schema } = mongoose;
 var User = new Schema({
+    name: {
+        type: String
+    },
+    email: {
+        type: String
+    },
     username: {
         type: String
     },

@@ -11,16 +11,19 @@ app.use(express.static('../frontend'))
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
-app.get('/login', (req,res)=>{
-    // res.sendFile('C:/Users/hardi/OneDrive/Desktop/IITH hack proj/frontend/login.html');
-    // console.log();
-    // console.log(res);
+app.post('/login', async (req,res)=>{
+    let username = req.body.username;
+    let password = req.body.password;
+
+    
 })
 
 app.post('/register',async (req,res)=>{
     console.log(req.body);
 
     const user = new User({
+        name: req.body.name,
+        email: req.body.email,
         username: req.body.username,
         password: req.body.password
     });
