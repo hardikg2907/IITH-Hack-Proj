@@ -5,6 +5,7 @@ Clone this project on your local machine. Make sure you have node.js installed.
 To run this project, follow the given steps in your terminal.
 
 ```bash
+cd backend
 npm i 
 npm start
 ```
