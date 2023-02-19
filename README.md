@@ -9,6 +9,10 @@ cd backend
 npm i 
 npm start
 ```
+Then paste this url in the browser:
+```
+localhost:3000/login.html
+```
 
 ## Collaborators
 [@deepak-ganwani](https://github.com/deepak-ganwani)
