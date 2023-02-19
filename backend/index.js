@@ -16,35 +16,28 @@ app.post('/login', async (req, res) => {
     let password = req.body.password;
 
     await User.findOne({ username: `${username}` }
-        // if(err)
-        // {
-        //     console.log('Not found user');
-        //     return;
-        // }
-        // if(password === user.password)
-        // {
-        //     console.log('User found');
-        //     return;
-        // }
     )
         .then(user => {
             if (password === user.password) {
                 console.log('User found')
                 return
             }
-            // else {
-            //     console.log('User not found.')
-            //     return
-            // }
         })
         .catch(err=>{
-            console.log('error');
+            console.log('User not found');
             return
         })
 })
 
 app.post('/register', async (req, res) => {
     console.log(req.body);
+
+    if(await User.findOne({username: `${req.body.username}`}))
+    {
+        // alert('Username Taken');
+        console.log('Username Taken');
+        return;
+    }
 
     const user = new User({
         name: req.body.name,
@@ -57,9 +50,13 @@ app.post('/register', async (req, res) => {
     return res.status(200).json(user);
 })
 
-app.listen(port, () => {
+app.listen(port, async () => {
     mongoose.connect(process.env.DB_URI, () => {
         console.log('DB Connected Successfully');
     });
     console.log(`Server is listening on port ${port}...`);
+    // console.log(User.find(function (err, db) {
+    //     if (err) return console.error(err);
+    //      console.dir(db);
+    // }));
 })
